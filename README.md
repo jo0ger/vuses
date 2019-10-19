@@ -2,6 +2,8 @@
 
 Vue Hooks built with Vue Composition Api
 
+> For Vue 3, but also compatible with Vue 2
+
 ## Usage
 
 if you are using `Vue2`, you must first import `@vue/composition-api` package:
