@@ -1,8 +1,12 @@
-import 'vue-tsx-support/enable-check'
-import { storiesOf } from '@storybook/vue'
+# useCounter
+
+Tracks state of a number
+
+## Usage
+
+```jsx
 import { createComponent } from '@vue/composition-api'
-import Doc from '../components/Doc'
-import { useCounter } from '../..'
+import { useCounter } from 'vuses'
 
 const Demo = createComponent({
   setup () {
@@ -40,9 +44,23 @@ const Demo = createComponent({
     )
   }
 })
+```
 
-const Docs= () => <Doc md={require('../../../docs/useCounter.md')}></Doc>
+## Reference
 
-storiesOf('State|useCounter', module)
-  .add('Docs', () => Docs)
-  .add('Demo', () => Demo)
+```typescript {8-12}
+function useCounter(
+  initialValue: number | Ref<number> = 0,
+  max: number | Ref<number> | null = null,
+  min: number | Ref<number> | null = null
+): [
+  Ref<number>,
+  {
+    get: () => number
+    set: (value: number) => void
+    inc: (delta?: number) => void
+    dec: (delta?: number) => void
+    reset: (value?: number) => void
+  }
+]
+```

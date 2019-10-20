@@ -2,6 +2,9 @@ import { configure } from '@storybook/vue'
 import { setOptions } from '@storybook/addon-options'
 import Vue from 'vue'
 import CompositionApi from '@vue/composition-api'
+import 'github-markdown-css'
+import 'prismjs/themes/prism.css'
+import './markdown.css'
 
 setOptions({
   sortStoriesByKind: false,
