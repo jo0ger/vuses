@@ -2,25 +2,16 @@
   "compilerOptions": {
     "moduleResolution": "node",
     "target": "esnext",
-    "module":"esnext",
+    "module": "esnext",
     "lib": ["esnext", "dom"],
     "strict": true,
     "sourceMap": false,
-    "allowJs": false,
     "declaration": true,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "noUnusedLocals": true,
-    "strictNullChecks": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
     "declarationDir": "dist/types",
     "outDir": "dist/lib",
-    "rootDir": ".",
-    "types": ["jest", "node"],
     "typeRoots": [
       "node_modules/@types"
     ]

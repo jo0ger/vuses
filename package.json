@@ -59,16 +59,9 @@
       "/node_modules/",
       "/test/"
     ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 10,
-        "functions": 15,
-        "lines": 15,
-        "statements": 15
-      }
-    },
     "collectCoverageFrom": [
-      "src/**/*.{js,ts}"
+      "src/**/*.{js,ts}",
+      "!src/utils/renderHook.ts"
     ]
   },
   "prettier": {

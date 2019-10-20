@@ -67,11 +67,6 @@ describe('state/useCounter', () => {
         dec: expect.any(Function),
         reset: expect.any(Function)
       })
-      expect(actions.get.length).toBe(0)
-      expect(actions.set.length).toBe(1)
-      expect(actions.inc.length).toBe(1)
-      expect(actions.dec.length).toBe(1)
-      expect(actions.reset.length).toBe(1)
     })
 
     it('should init counter to 0 if no initial value is received', () => {
