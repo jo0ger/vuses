@@ -46,6 +46,8 @@ and then:
 
 * State:
   * `useCounter`: tracks state of a number
+* Sensor:
+  * `useWindowSize`: tracks `Widnow` dimensions(browser env is required)
 
 ## Contributing
 

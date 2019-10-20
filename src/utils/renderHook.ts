@@ -8,7 +8,7 @@ const localVue = createLocalVue()
 
 localVue.use(CompositionAPI)
 
-export function renderHook<Props = unknown, RawBindings = Data>(
+export function renderHook<Inject = any, Props = unknown, RawBindings = Data>(
   setup: SetupFunction<Props, RawBindings>,
   shallow: boolean = true
 ) {
@@ -18,7 +18,7 @@ export function renderHook<Props = unknown, RawBindings = Data>(
     setup
   })
 
-  return (shallow ? shallowMount : mount)<Vue>(root, {
+  return (shallow ? shallowMount : mount)<Vue & Inject>(root, {
     localVue
   })
 }

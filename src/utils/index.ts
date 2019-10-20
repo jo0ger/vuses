@@ -1,3 +1,5 @@
+export const isBrowser = typeof window === 'object'
+
 export const isArray = Array.isArray
 export const isString = (val: any): val is string => typeof val === 'string'
 export const isNumber = (val: any): val is number => typeof val === 'number'
@@ -11,4 +13,27 @@ export const warnPrefix = '[Vuses warn]: '
 
 export const warn = (msg: string, ...args: any[]) => {
   console.error(warnPrefix + msg, ...args)
+}
+
+export const checkBrowser = (ctx = '') => {
+  !isBrowser && warn(ctx + ' requires a browser environment')
+  return isBrowser
+}
+
+export const addEventListener = (
+  el: Element | Window,
+  event: string,
+  handler: EventListener,
+  options?: EventListenerOptions
+) => {
+  el.addEventListener(event, handler, options)
+}
+
+export const removeEventListener = (
+  el: Element | Window,
+  event: string,
+  handler: EventListener,
+  options?: EventListenerOptions
+) => {
+  el.removeEventListener(event, handler, options)
 }
