@@ -1,3 +1,5 @@
+import { isRef, Ref } from '@vue/composition-api'
+
 export const isBrowser = typeof window === 'object'
 
 export const isArray = Array.isArray
@@ -11,9 +13,11 @@ export const isObject = (val: any): val is Record<any, any> =>
 
 export const warnPrefix = '[Vuses warn]: '
 
-export const warn = (msg: string, ...args: any[]) => {
+export const warn = (msg: string, ...args: any[]) =>
   console.error(warnPrefix + msg, ...args)
-}
+
+export const unwrap = <T>(target: T | Ref<T>): T =>
+  isRef<T>(target) ? target.value : target
 
 export const checkBrowser = (ctx = '') => {
   !isBrowser && warn(ctx + ' requires a browser environment')

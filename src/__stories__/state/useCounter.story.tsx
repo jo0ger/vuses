@@ -1,13 +1,10 @@
 import 'vue-tsx-support/enable-check'
 import { storiesOf } from '@storybook/vue'
-import { createComponent, ref } from '@vue/composition-api'
+import { createComponent } from '@vue/composition-api'
 import { useCounter } from '../..'
 
 const Demo = createComponent({
   setup () {
-    const r1 = ref(0)
-    const r2 = ref(r1)
-    console.log(r1, r2)
     const [min, { inc: incMin, dec: decMin }] = useCounter(1)
     const [max, { inc: incMax, dec: decMax }] = useCounter(10)
     const [count, { inc, dec, set, reset }] = useCounter(5, max, min)

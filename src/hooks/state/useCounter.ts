@@ -1,5 +1,5 @@
-import { ref } from '@vue/composition-api'
-import { warn, isNumber } from '../../utils'
+import { ref, Ref, isRef } from '@vue/composition-api'
+import { warn, isNumber, unwrap } from '../../utils'
 
 export interface CounterActions {
   get: () => number
@@ -10,37 +10,45 @@ export interface CounterActions {
 }
 
 export default function useCounter(
-  initialValue: number = 0,
-  max: number | null = null,
-  min: number | null = null
+  initialValue: number | Ref<number> = 0,
+  max: number | Ref<number> | null = null,
+  min: number | Ref<number> | null = null
 ) {
-  !isNumber(initialValue) &&
-    warn('initialValue has to be a number, but got ' + typeof initialValue)
+  let value = unwrap(initialValue)
+  !isNumber(value) &&
+    warn(
+      'initialValue has to be a number or Ref, but got ' + typeof initialValue
+    )
 
-  if (isNumber(max)) {
-    initialValue = Math.min(initialValue, max)
-  } else if (max !== null) {
-    warn('max has to be a number, but got ' + typeof max)
+  const initialMin = unwrap(min)
+  const initialMax = unwrap(max)
+
+  if (isNumber(initialMax)) {
+    value = Math.min(value, initialMax)
+  } else if (initialMax !== null) {
+    warn('max has to be a number or Ref, but got ' + typeof initialMax)
   }
 
-  if (isNumber(min)) {
-    initialValue = Math.max(initialValue, min)
-  } else if (min !== null) {
-    warn('min has to be a number, but got ' + typeof min)
+  if (isNumber(initialMin)) {
+    value = Math.max(value, initialMin)
+  } else if (initialMin !== null) {
+    warn('min has to be a number or Ref, but got ' + typeof initialMin)
   }
 
-  const counter = ref(initialValue)
+  const counter = isRef(initialValue) ? initialValue : ref(value)
   const get = () => counter.value
   const set = (value: number) => {
     if (!isNumber(value)) {
       warn('value has to be a number, but got ' + typeof value)
     }
     if (counter.value === value) return
-    if (isNumber(min)) {
-      value = Math.max(value, min)
+    const minValue = unwrap(min)
+    const maxValue = unwrap(max)
+    if (isNumber(minValue)) {
+      value = Math.max(value, minValue)
     }
-    if (isNumber(max)) {
-      value = Math.min(value, max)
+    if (isNumber(maxValue)) {
+      value = Math.min(value, maxValue)
     }
     counter.value = value
   }
@@ -58,7 +66,7 @@ export default function useCounter(
       set(counter.value - delta)
     }
   }
-  const reset = (value: number = initialValue) => {
+  const reset = (value: number = unwrap(initialValue)) => {
     set(value)
     initialValue = value
   }

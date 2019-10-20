@@ -1,6 +1,7 @@
 import { useCounter } from '../../../src'
 import { warnPrefix } from '../../../src/utils'
 import { renderHook } from '../../../src/utils/renderHook'
+import { ref, isRef } from '@vue/composition-api'
 
 describe('state/useCounter', () => {
   renderHook(() => {
@@ -15,19 +16,19 @@ describe('state/useCounter', () => {
       // @ts-ignore
       useCounter(true)
       expect(warn.mock.calls[0][0]).toBe(
-        warnPrefix + 'initialValue has to be a number, but got boolean'
+        warnPrefix + 'initialValue has to be a number or Ref, but got boolean'
       )
 
       // @ts-ignore
       useCounter(10, false)
       expect(warn.mock.calls[1][0]).toBe(
-        warnPrefix + 'max has to be a number, but got boolean'
+        warnPrefix + 'max has to be a number or Ref, but got boolean'
       )
 
       // @ts-ignore
       useCounter(10, 20, {})
       expect(warn.mock.calls[2][0]).toBe(
-        warnPrefix + 'min has to be a number, but got object'
+        warnPrefix + 'min has to be a number or Ref, but got object'
       )
 
       const [_, { set, inc, dec, reset }] = useCounter(10)
@@ -69,9 +70,40 @@ describe('state/useCounter', () => {
       })
     })
 
+    it('should return a ref counter', () => {
+      const [counter] = useCounter()
+      expect(isRef(counter)).toBe(true)
+    })
+
     it('should init counter to 0 if no initial value is received', () => {
       const [counter] = useCounter()
       expect(counter.value).toBe(0)
+    })
+
+    it('should unwrap initialValue, max and min', () => {
+      const [initialValue, { set: setInitialValue }] = useCounter(5)
+      const [max, { set: setMax }] = useCounter(10)
+      const [min, { set: setMin }] = useCounter(1)
+      const [counter, { set }] = useCounter(initialValue, max, min)
+
+      expect(counter.value).toBe(5)
+
+      setInitialValue(6)
+      expect(counter.value).toBe(6)
+
+      set(11)
+      expect(counter.value).toBe(max.value)
+
+      set(-1)
+      expect(counter.value).toBe(min.value)
+
+      setMax(11)
+      set(11)
+      expect(counter.value).toBe(max.value)
+
+      setMin(-1)
+      set(-1)
+      expect(counter.value).toBe(min.value)
     })
 
     it('should get current counter', () => {
