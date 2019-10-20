@@ -16,7 +16,11 @@ export default {
     { file: pkg.module, format: 'es', sourcemap: false },
   ],
   // Indicate here external modules you don't wanna include in your bundle (i.e.: 'lodash')
-  external: [],
+  external: [
+    'vue',
+    '@vue/composition-api',
+    'lodash'
+  ],
   watch: {
     include: 'src/**',
   },
