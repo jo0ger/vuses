@@ -16,16 +16,17 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=8.0.0"
   },
   "scripts": {
     "lint": "tslint -p tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
+    "lint:prettier": "prettier '{src,test}/**/*.{ts,md,mdx}' --check",
     "prebuild": "rimraf dist",
     "build": "tsc --module commonjs && rollup -c rollup.config.ts && typedoc --out docs --target es6 --theme minimal --mode file src",
     "dev": "rollup -c rollup.config.ts -w",
     "test": "jest --coverage",
     "test:watch": "jest --coverage --watch",
-    "test:prod": "npm run lint && npm run test -- --no-cache",
+    "test:prod": "yarn test -- --no-cache",
     "deploy-docs": "ts-node tools/gh-pages-publish",
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
     "commit": "git-cz",
@@ -60,10 +61,10 @@
     ],
     "coverageThreshold": {
       "global": {
-        "branches": 90,
-        "functions": 95,
-        "lines": 95,
-        "statements": 95
+        "branches": 10,
+        "functions": 15,
+        "lines": 15,
+        "statements": 15
       }
     },
     "collectCoverageFrom": [
