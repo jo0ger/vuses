@@ -7,7 +7,7 @@ export const isSymbol = (val: any): val is symbol => typeof val === 'symbol'
 export const isObject = (val: any): val is Record<any, any> =>
   val !== null && typeof val === 'object'
 
-export const warnPrefix = '[Vueues warn]: '
+export const warnPrefix = '[Vuses warn]: '
 
 export const warn = (msg: string, ...args: any[]) => {
   console.error(warnPrefix + msg, ...args)

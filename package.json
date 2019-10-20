@@ -1,11 +1,11 @@
 {
-  "name": "vueues",
+  "name": "vuses",
   "version": "0.0.0",
   "description": "",
   "keywords": [],
-  "main": "dist/vueues.umd.js",
-  "module": "dist/vueues.esm.js",
-  "typings": "dist/types/vueues.d.ts",
+  "main": "dist/vuses.umd.js",
+  "module": "dist/vuses.esm.js",
+  "typings": "dist/types/vuses.d.ts",
   "files": [
     "dist"
   ],

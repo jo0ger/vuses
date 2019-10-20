@@ -18,6 +18,6 @@
   },
   "include": [
     "src",
-    "test"
+    "src/utils/renderHook.ts"
   ]
 }

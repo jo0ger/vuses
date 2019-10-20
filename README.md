@@ -1,4 +1,4 @@
-# vueues
+# vuses
 
 Vue Hooks built with Vue Composition Api
 
@@ -27,7 +27,7 @@ and then:
 </template>
 
 <script>
-  import { useCounter } from 'vueues'
+  import { useCounter } from 'vuses'
 
   export default {
     setup () {
