@@ -21,6 +21,7 @@
     "src"
   ],
   "exclude": [
+    "src/__stories__",
     "src/utils/renderHook.ts"
   ]
 }
