@@ -45,9 +45,9 @@ and then:
 ## Hooks
 
 * State:
-  * `useCounter`: tracks state of a number
+  * [`useCounter`](./src/hooks/useCounter/doc.md): tracks state of a number
 * Sensor:
-  * `useWindowSize`: tracks `Widnow` dimensions(browser env is required)
+  * [`useWindowSize`](./src/hooks/useWindowsize/doc.md): tracks `Widnow` dimensions(browser environment is required)
 
 ## Contributing
 
