@@ -1,4 +1,4 @@
-# useCounter
+# useWindowSize
 
 tracks `Widnow` dimensions
 
@@ -8,7 +8,7 @@ tracks `Widnow` dimensions
 
 ```jsx
 import { createComponent } from '@vue/composition-api'
-import { useCounter } from 'vuses'
+import { useWindowSize } from 'vuses'
 
 const Demo = createComponent({
   setup () {

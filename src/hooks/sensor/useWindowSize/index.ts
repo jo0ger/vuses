@@ -3,7 +3,7 @@ import {
   checkBrowser,
   addEventListener,
   removeEventListener
-} from '../../utils'
+} from '../../../utils'
 
 export default function useWindowSize() {
   checkBrowser(useWindowSize.name)

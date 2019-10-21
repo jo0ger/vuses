@@ -1,8 +1,7 @@
-import 'vue-tsx-support/enable-check'
 import { storiesOf } from '@storybook/vue'
 import { createComponent } from '@vue/composition-api'
-import Doc from '../components/Doc'
-import { useCounter } from '../..'
+import Doc from '../../../__stories__/components/Doc'
+import { useCounter } from '../../..'
 
 const Demo = createComponent({
   setup () {
@@ -41,7 +40,7 @@ const Demo = createComponent({
   }
 })
 
-const Docs = () => <Doc md={require('../../../docs/state/useCounter.md')}></Doc>
+const Docs = () => <Doc md={require('./doc.md')}></Doc>
 
 storiesOf('State|useCounter', module)
   .add('Docs', () => Docs as any)

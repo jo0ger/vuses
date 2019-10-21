@@ -1,8 +1,8 @@
 import 'vue-tsx-support/enable-check'
 import { storiesOf } from '@storybook/vue'
 import { createComponent } from '@vue/composition-api'
-import Doc from '../components/Doc'
-import { useWindowSize } from '../..'
+import Doc from '../../../__stories__/components/Doc'
+import { useWindowSize } from '../../..'
 
 const Demo = createComponent({
   setup () {
@@ -20,7 +20,7 @@ const Demo = createComponent({
   }
 })
 
-const Docs = () => <Doc md={require('../../../docs/sensor/useWindowSize.md')}></Doc>
+const Docs = () => <Doc md={require('./doc.md')}></Doc>
 
 storiesOf('Sensor|useWindowSize', module)
   .add('Docs', () => Docs as any)

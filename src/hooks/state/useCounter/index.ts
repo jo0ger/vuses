@@ -1,5 +1,5 @@
 import { ref, Ref, isRef } from '@vue/composition-api'
-import { warn, isNumber, unwrap } from '../../utils'
+import { warn, isNumber, unwrap } from '../../../utils'
 
 export interface CounterActions {
   get: () => number
