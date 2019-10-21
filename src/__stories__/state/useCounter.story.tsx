@@ -41,7 +41,7 @@ const Demo = createComponent({
   }
 })
 
-const Docs= () => <Doc md={require('../../../docs/useCounter.md')}></Doc>
+const Docs= () => <Doc md={require('../../../docs/state/useCounter.md')}></Doc>
 
 storiesOf('State|useCounter', module)
   .add('Docs', () => Docs)
