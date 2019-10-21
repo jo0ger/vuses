@@ -1,4 +1,3 @@
-import 'vue-tsx-support/enable-check'
 import { storiesOf } from '@storybook/vue'
 import { createComponent } from '@vue/composition-api'
 import Doc from '../../../__stories__/components/Doc'

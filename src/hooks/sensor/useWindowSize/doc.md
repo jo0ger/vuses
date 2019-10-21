@@ -1,6 +1,6 @@
 # useWindowSize
 
-tracks `Widnow` dimensions
+Vue hooks that tracks `Widnow` dimensions
 
 > Browser environment is required
 
