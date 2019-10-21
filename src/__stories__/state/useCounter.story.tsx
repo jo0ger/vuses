@@ -11,7 +11,7 @@ const Demo = createComponent({
     const [count, { inc, dec, set, reset }] = useCounter(5, max, min)
     return { min, incMin, decMin, max, incMax, decMax, count, inc, dec, set, reset }
   },
-  render (this: any) {
+  render () {
     const { min, incMin, decMin, max, incMax, decMax, count, inc, dec, set, reset } = this
     return (
       <div>
@@ -41,8 +41,8 @@ const Demo = createComponent({
   }
 })
 
-const Docs= () => <Doc md={require('../../../docs/state/useCounter.md')}></Doc>
+const Docs = () => <Doc md={require('../../../docs/state/useCounter.md')}></Doc>
 
 storiesOf('State|useCounter', module)
-  .add('Docs', () => Docs)
+  .add('Docs', () => Docs as any)
   .add('Demo', () => Demo)
