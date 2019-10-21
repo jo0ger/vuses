@@ -1,7 +1,7 @@
 import { useCounter } from '../../../src'
 import { warnPrefix } from '../../../src/utils'
 import { renderHook } from '../../../src/utils/renderHook'
-import { ref, isRef } from '@vue/composition-api'
+import { isRef } from '@vue/composition-api'
 
 describe('state/useCounter', () => {
   renderHook(() => {
