@@ -1,24 +1,41 @@
-# useCounter
-
-Vue hook that tracks state of a number
-
-> [`useNumber`](./?path=/story/state-usenumber--docs) is an alias for `useCounter`
-
-## Usage
-
-```jsx
+import { storiesOf } from '@storybook/vue'
 import { createComponent } from '@vue/composition-api'
-import { useCounter } from 'vuses'
+import Doc from '../../../__stories__/components/Doc'
+import { useNumber } from '../../..'
 
 const Demo = createComponent({
-  setup () {
-    const [min, { inc: incMin, dec: decMin }] = useCounter(1)
-    const [max, { inc: incMax, dec: decMax }] = useCounter(10)
-    const [count, { inc, dec, set, reset }] = useCounter(5, max, min)
-    return { min, incMin, decMin, max, incMax, decMax, count, inc, dec, set, reset }
+  setup() {
+    const [min, { inc: incMin, dec: decMin }] = useNumber(1)
+    const [max, { inc: incMax, dec: decMax }] = useNumber(10)
+    const [count, { inc, dec, set, reset }] = useNumber(5, max, min)
+    return {
+      min,
+      incMin,
+      decMin,
+      max,
+      incMax,
+      decMax,
+      count,
+      inc,
+      dec,
+      set,
+      reset
+    }
   },
-  render (this: any) {
-    const { min, incMin, decMin, max, incMax, decMax, count, inc, dec, set, reset } = this
+  render() {
+    const {
+      min,
+      incMin,
+      decMin,
+      max,
+      incMax,
+      decMax,
+      count,
+      inc,
+      dec,
+      set,
+      reset
+    } = this
     return (
       <div>
         <div>
@@ -46,23 +63,9 @@ const Demo = createComponent({
     )
   }
 })
-```
 
-## Reference
+const Docs = () => <Doc md={require('./doc.md')}></Doc>
 
-```typescript {8-12}
-function useCounter(
-  initialValue: number | Ref<number> = 0,
-  max: number | Ref<number> | null = null,
-  min: number | Ref<number> | null = null
-): [
-  Ref<number>,
-  {
-    get: () => number
-    set: (value: number) => void
-    inc: (delta?: number) => void
-    dec: (delta?: number) => void
-    reset: (value?: number) => void
-  }
-]
-```
+storiesOf('State|useNumber', module)
+  .add('Docs', () => Docs as any)
+  .add('Demo', () => Demo)

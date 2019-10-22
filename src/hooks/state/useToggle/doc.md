@@ -2,7 +2,7 @@
 
 Vue hook that tracks state of a boolean
 
-> [`useBoolean`](./?path=/story/state-useBoolean--docs) is an alias for `useToggle`
+> [`useBoolean`](./?path=/story/state-useboolean--docs) is an alias for `useToggle`
 
 ## Usage
 

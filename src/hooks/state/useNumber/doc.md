@@ -1,20 +1,20 @@
-# useCounter
+# useNumber
 
 Vue hook that tracks state of a number
 
-> [`useNumber`](./?path=/story/state-usenumber--docs) is an alias for `useCounter`
+> `useNumber` is an alias for [`useCounter`](./?path=/story/state-usecounter--docs)
 
 ## Usage
 
 ```jsx
 import { createComponent } from '@vue/composition-api'
-import { useCounter } from 'vuses'
+import { useNumber } from 'vuses'
 
 const Demo = createComponent({
   setup () {
-    const [min, { inc: incMin, dec: decMin }] = useCounter(1)
-    const [max, { inc: incMax, dec: decMax }] = useCounter(10)
-    const [count, { inc, dec, set, reset }] = useCounter(5, max, min)
+    const [min, { inc: incMin, dec: decMin }] = useNumber(1)
+    const [max, { inc: incMax, dec: decMax }] = useNumber(10)
+    const [count, { inc, dec, set, reset }] = useNumber(5, max, min)
     return { min, incMin, decMin, max, incMax, decMax, count, inc, dec, set, reset }
   },
   render (this: any) {
@@ -51,7 +51,7 @@ const Demo = createComponent({
 ## Reference
 
 ```typescript {8-12}
-function useCounter(
+function useNumber(
   initialValue: number | Ref<number> = 0,
   max: number | Ref<number> | null = null,
   min: number | Ref<number> | null = null
