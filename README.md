@@ -81,13 +81,13 @@ and then:
   * [ ] `useTitle`: sets title of the page
   * [ ] `usePermission`: query permission status for browser APIs
 * UI:
-  * `useClickAway`: triggers callback when user clicks outside target area
-  * `useCss`: dynamically adjusts CSS
-  * `useFullscreen`: display an element or video full-screen
-  * `useWait`: complex waiting management for UIs
+  * [] `useClickAway`: triggers callback when user clicks outside target area
+  * [] `useCss`: dynamically adjusts CSS
+  * [] `useFullscreen`: display an element or video full-screen
+  * [] `useWait`: complex waiting management for UIs
 * Animations:
-  * `useTimeout`: re-renders component after a timeout
-  * `useInterval`: re-renders component on a set interval using `setInterval`
+  * [] `useTimeout`: re-renders component after a timeout
+  * [] `useInterval`: re-renders component on a set interval using `setInterval`
 
 ## Contributing
 
