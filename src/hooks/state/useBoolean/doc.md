@@ -1,28 +1,28 @@
-# useToggle
+# useBoolean
 
 Vue hooks that tracks state of a boolean
 
-> [`useBoolean`](./?path=/story/state-useBoolean--docs) is an alias for `useToggle`
+> `useBoolean` is an alias for [`useToggle`](./?path=/story/state-usetoggle--docs)
 
 ## Usage
 
 ```jsx
 import { createComponent } from '@vue/composition-api'
-import { useToggle } from 'vuses'
+import { useBoolean } from 'vuses'
 
 const Demo = createComponent({
   setup() {
-    const [state, toggle] = useToggle(false)
+    const [state, toggle] = useBoolean()
     return { state, toggle }
   },
   render() {
     const { state, toggle } = this
     return (
       <div>
-        <div>{state ? 'ON' : 'OFF'}</div>
+        <div>{state}</div>
         <button onClick={toggle}>Toggle</button>
-        <button onClick={() => toggle(true)}>set ON</button>
-        <button onClick={() => toggle(false)}>set OFF</button>
+        <button onClick={() => toggle(true)}>set true</button>
+        <button onClick={() => toggle(false)}>set false</button>
       </div>
     )
   }
@@ -32,7 +32,7 @@ const Demo = createComponent({
 ## Reference
 
 ```typescript {2-3}
-function useToggle(
+function useBoolean(
   initialValue: boolean = false
 ): [Ref<boolean>, (value?: unknown) => void]
 ```

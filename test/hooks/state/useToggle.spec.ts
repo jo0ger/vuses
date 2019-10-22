@@ -2,11 +2,11 @@ import { renderHook } from '../../../src/utils/renderHook'
 import { useToggle } from '../../../src'
 
 describe('state/useToggle', () => {
-  renderHook(() => {
-    it('should be exported', () => {
-      expect(useToggle).toBeDefined()
-    })
+  it('should be exported', () => {
+    expect(useToggle).toBeDefined()
+  })
 
+  renderHook(() => {
     it('should return [state, toggle]', () => {
       const [state, toggle] = useToggle(true)
 

@@ -4,11 +4,11 @@ import { renderHook } from '../../../src/utils/renderHook'
 import { isRef } from '@vue/composition-api'
 
 describe('state/useCounter', () => {
-  renderHook(() => {
-    it('should be exported', () => {
-      expect(useCounter).toBeDefined()
-    })
+  it('should be exported', () => {
+    expect(useCounter).toBeDefined()
+  })
 
+  renderHook(() => {
     it('should warn on unexpected inputs', () => {
       // tslint:disable-next-line: no-empty
       const warn = jest.spyOn(console, 'error').mockImplementation(() => {})

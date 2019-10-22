@@ -46,7 +46,7 @@ and then:
 
 * State:
   * [`useCounter`](./src/hooks/state/useCounter/doc.md): tracks state of a number
-  * [`useToggle`](./src/hooks/state/useToggle/doc.md): tracks state of a boolean
+  * [`useToggle`](./src/hooks/state/useToggle/doc.md) and [`useBoolean`](./src/hooks/state/useBoolean/doc.md): tracks state of a boolean
 * Sensor:
   * [`useWindowSize`](./src/hooks/sensor/useWindowsize/doc.md): tracks `Widnow` dimensions(browser environment is required)
 
