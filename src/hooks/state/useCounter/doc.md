@@ -1,6 +1,6 @@
 # useCounter
 
-Vue hooks that tracks state of a number
+Vue hook that tracks state of a number
 
 ## Usage
 

@@ -1,6 +1,6 @@
 # useBoolean
 
-Vue hooks that tracks state of a boolean
+Vue hook that tracks state of a boolean
 
 > `useBoolean` is an alias for [`useToggle`](./?path=/story/state-usetoggle--docs)
 
