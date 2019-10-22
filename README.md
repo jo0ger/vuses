@@ -45,7 +45,7 @@ and then:
 ## Hooks Plan
 
 * State:
-  * [x] [`useCounter`](./src/hooks/state/useCounter/doc.md): tracks state of a number
+  * [x] [`useCounter`](./src/hooks/state/useCounter/doc.md) and [`useNumber`](./src/hooks/state/useNumber/doc.md): tracks state of a number
   * [x] [`useToggle`](./src/hooks/state/useToggle/doc.md) and [`useBoolean`](./src/hooks/state/useBoolean/doc.md): tracks state of a boolean
   * [ ] `usePrevious`: returns the previous state or props
   * [ ] `useDefault`: returns the default value when state is `null` or `undefined`
