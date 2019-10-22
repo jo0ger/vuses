@@ -58,7 +58,7 @@ and then:
   * [ ] `useStateValidator`: tracks state of an object
 * Sensors:
   * [x] [`useWindowSize`](./src/hooks/sensor/useWindowsize/doc.md): tracks `Widnow` dimensions(browser environment is required)
-  * [x] `useWindowScroll`: tracks `Window` scroll position(browser environment is required)
+  * [x] [`useWindowScroll`](./src/hooks/sensor/useWindowScroll/doc.md): tracks `Window` scroll position(browser environment is required)
   * [ ] `useBattery`: tracks device battery state
   * [ ] `useGeolocation`: tracks geo location state of user's device
   * [ ] `useIdle`: tracks whether user is being inactive
