@@ -1,4 +1,4 @@
-# useWindowSize
+# useWindowScroll
 
 Vue hook that tracks `Window` scroll position
 

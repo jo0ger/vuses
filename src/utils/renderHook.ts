@@ -8,6 +8,8 @@ const localVue = createLocalVue()
 
 localVue.use(CompositionAPI)
 
+export default localVue
+
 export function renderHook<Inject = any, Props = unknown, RawBindings = Data>(
   setup: SetupFunction<Props, RawBindings>,
   shallow: boolean = true
