@@ -4,14 +4,38 @@ import Doc from '../../../__stories__/components/Doc'
 import { useCounter } from '../../..'
 
 const Demo = createComponent({
-  setup () {
+  setup() {
     const [min, { inc: incMin, dec: decMin }] = useCounter(1)
     const [max, { inc: incMax, dec: decMax }] = useCounter(10)
     const [count, { inc, dec, set, reset }] = useCounter(5, max, min)
-    return { min, incMin, decMin, max, incMax, decMax, count, inc, dec, set, reset }
+    return {
+      min,
+      incMin,
+      decMin,
+      max,
+      incMax,
+      decMax,
+      count,
+      inc,
+      dec,
+      set,
+      reset
+    }
   },
-  render () {
-    const { min, incMin, decMin, max, incMax, decMax, count, inc, dec, set, reset } = this
+  render() {
+    const {
+      min,
+      incMin,
+      decMin,
+      max,
+      incMax,
+      decMax,
+      count,
+      inc,
+      dec,
+      set,
+      reset
+    } = this
     return (
       <div>
         <div>

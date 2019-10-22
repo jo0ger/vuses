@@ -20,7 +20,7 @@
   },
   "scripts": {
     "lint": "tslint -p tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
-    "lint:prettier": "prettier '{src,test}/**/*.{ts,md,mdx}' --check",
+    "lint:prettier": "prettier '{src,test}/**/*.{ts,tsx,md,mdx}' --check",
     "prebuild": "rimraf dist",
     "build": "tsc --module ESNext && rollup -c rollup.config.ts",
     "dev": "rollup -c rollup.config.ts -w",
@@ -37,7 +37,7 @@
     "storybook:build": "build-storybook"
   },
   "lint-staged": {
-    "{src,test}/**/*.ts": [
+    "{src,test}/**/*.{ts,tsx,md,mdx}": [
       "prettier --write",
       "git add"
     ]

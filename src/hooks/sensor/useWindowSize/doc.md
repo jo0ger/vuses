@@ -11,16 +11,16 @@ import { createComponent } from '@vue/composition-api'
 import { useWindowSize } from 'vuses'
 
 const Demo = createComponent({
-  setup () {
+  setup() {
     const { width, height } = useWindowSize()
     return { width, height }
   },
-  render () {
+  render() {
     const { width, height } = this
     return (
       <div>
-        <p>width: { width }px</p>
-        <p>height: { height }px</p>
+        <p>width: {width}px</p>
+        <p>height: {height}px</p>
       </div>
     )
   }
@@ -30,7 +30,7 @@ const Demo = createComponent({
 ## Reference
 
 ```typescript {2-3}
-function useWindowSize (): {
+function useWindowSize(): {
   width: Ref<number>
   height: Ref<number>
 }

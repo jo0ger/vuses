@@ -9,11 +9,11 @@ import { createComponent } from '@vue/composition-api'
 import { useToggle } from 'vuses'
 
 const Demo = createComponent({
-  setup () {
+  setup() {
     const [state, toggle] = useToggle(false)
-    return {state, toggle}
+    return { state, toggle }
   },
-  render () {
+  render() {
     const { state, toggle } = this
     return (
       <div>
@@ -29,11 +29,8 @@ const Demo = createComponent({
 
 ## Reference
 
-```typescript {2,4-5}
+```typescript {2-3}
 function useToggle(
   initialValue: boolean = false
-): [
-  Ref<boolean>,
-  (value?: unknown) => void
-]
+): [Ref<boolean>, (value?: unknown) => void]
 ```

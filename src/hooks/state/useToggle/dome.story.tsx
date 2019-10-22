@@ -4,11 +4,11 @@ import Doc from '../../../__stories__/components/Doc'
 import { useToggle } from '../../..'
 
 const Demo = createComponent({
-  setup () {
+  setup() {
     const [state, toggle] = useToggle()
-    return {state, toggle}
+    return { state, toggle }
   },
-  render () {
+  render() {
     const { state, toggle } = this
     return (
       <div>

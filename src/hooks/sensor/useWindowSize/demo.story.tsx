@@ -4,16 +4,16 @@ import Doc from '../../../__stories__/components/Doc'
 import { useWindowSize } from '../../..'
 
 const Demo = createComponent({
-  setup () {
+  setup() {
     const { width, height } = useWindowSize()
     return { width, height }
   },
-  render () {
+  render() {
     const { width, height } = this
     return (
       <div>
-        <p>width: { width }px</p>
-        <p>height: { height }px</p>
+        <p>width: {width}px</p>
+        <p>height: {height}px</p>
       </div>
     )
   }
