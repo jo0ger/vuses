@@ -7,3 +7,4 @@ export { default as usePrevious } from './hooks/state/usePrevious'
 
 // Sensor Hooks
 export { default as useWindowSize } from './hooks/sensor/useWindowSize'
+export { default as useWindowScroll } from './hooks/sensor/useWindowScroll'

@@ -29,7 +29,7 @@ export const addEventListener = (
   el: Element | Window,
   event: string,
   handler: EventListener,
-  options?: EventListenerOptions
+  options?: AddEventListenerOptions
 ) => {
   el.addEventListener(event, handler, options)
 }

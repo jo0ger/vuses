@@ -14,7 +14,10 @@ export function renderHook<Inject = any, Props = unknown, RawBindings = Data>(
 ) {
   // @ts-ignore
   const root = createComponent<Props, RawBindings>({
-    template: `<div id="app"></div>`,
+    template: `
+      <div id="app" :style="{ width: '200vw', height: '200vh' }">
+      </div>
+    `,
     setup
   })
 
