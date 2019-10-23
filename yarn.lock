@@ -1220,11 +1220,11 @@
     prop-types "^15.7.2"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-options@^5.2.4":
-  version "5.2.4"
-  resolved "https://registry.npmjs.org/@storybook/addon-options/-/addon-options-5.2.4.tgz#2b8d06b38b4625236691aa642af46d11565dd53d"
+"@storybook/addon-options@^5.2.5":
+  version "5.2.5"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-5.2.5.tgz#eab986dfa9a5716490b5efa4f709fad3467ff9f9"
   dependencies:
-    "@storybook/addons" "5.2.4"
+    "@storybook/addons" "5.2.5"
     core-js "^3.0.1"
     util-deprecate "^1.0.2"
 
