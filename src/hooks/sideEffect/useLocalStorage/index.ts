@@ -5,13 +5,25 @@ export default function useLocalStorage<T>(
   key: string,
   initialValue?: T,
   raw?: boolean
+) {
+  return getStorageComputedState<T>(localStorage, key, initialValue, raw)
+}
+
+export function getStorageComputedState<T>(
+  storage: Storage,
+  key: string,
+  initialValue?: T,
+  raw?: boolean
 ): [Ref<T>, (val: T) => void] {
-  if (!checkBrowser(useLocalStorage.name)) {
+  if (
+    !checkBrowser(
+      storage === localStorage ? 'useLocalStorage' : 'useSessionStorage'
+    )
+  ) {
     return [ref(initialValue), noop]
   }
 
   const format = raw ? String : JSON.stringify
-
   const flag = ref(0)
 
   // TODO use effect in Vue3
@@ -20,27 +32,27 @@ export default function useLocalStorage<T>(
       // tslint:disable-next-line: no-unused-expression
       flag.value
       try {
-        const value = localStorage.getItem(key)
+        const value = storage.getItem(key)
         if (!isString(value)) {
-          localStorage.setItem(key, format(initialValue))
+          storage.setItem(key, format(initialValue))
           return initialValue
         } else {
           return raw ? value : JSON.parse(value || 'null')
         }
       } catch {
         // If user is in private mode or has storage restriction
-        // localStorage can throw. JSON.parse and JSON.stringify
+        // storage can throw. JSON.parse and JSON.stringify
         // can throw, too.
         return initialValue
       }
     },
     set(val: T) {
       try {
-        localStorage.setItem(key, format(val))
+        storage.setItem(key, format(val))
         flag.value++
       } catch {
         // If user is in private mode or has storage restriction
-        // localStorage can throw. JSON.parse and JSON.stringify
+        // storage can throw. JSON.parse and JSON.stringify
         // can throw, too.
       }
     }
