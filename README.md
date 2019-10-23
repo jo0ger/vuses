@@ -1,6 +1,11 @@
 # vuses
 
-Vue Hooks built with Vue Composition Api
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![Travis](https://img.shields.io/travis/jo0ger/vuses.svg)](https://travis-ci.org/jo0ger/vuses)
+[![Coveralls](https://img.shields.io/coveralls/jo0ger/vuses.svg)](https://coveralls.io/github/jo0ger/vuses)
+[![dependencies](https://david-dm.org/jo0ger/vuses/status.svg)](https://david-dm.org/jo0ger/vuses)
+
+Vue Hooks that built with Vue Composition Api
 
 > For Vue 3, but also compatible with Vue 2
 
