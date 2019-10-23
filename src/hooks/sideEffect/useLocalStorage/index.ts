@@ -9,6 +9,7 @@ export default function useLocalStorage<T>(
   return getStorageComputedState<T>(localStorage, key, initialValue, raw)
 }
 
+// TODO optimize
 export function getStorageComputedState<T>(
   storage: Storage,
   key: string,
@@ -46,7 +47,7 @@ export function getStorageComputedState<T>(
         return initialValue
       }
     },
-    set(val: T) {
+    set(val: any) {
       try {
         storage.setItem(key, format(val))
         flag.value++
