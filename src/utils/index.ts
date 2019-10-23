@@ -2,6 +2,9 @@ import { isRef, Ref } from '@vue/composition-api'
 
 export const isBrowser = typeof window === 'object'
 
+// tslint:disable-next-line: no-empty
+export const noop = () => {}
+
 export const isArray = Array.isArray
 export const isString = (val: any): val is string => typeof val === 'string'
 export const isNumber = (val: any): val is number => typeof val === 'number'
