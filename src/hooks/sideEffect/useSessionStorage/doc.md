@@ -1,6 +1,6 @@
-# useLocalStorage
+# useSessionStorage
 
-Vue hook that manages a value in `localStorage`
+Vue hook that manages a value in `sessionStorage`
 
 > Browser environment is required
 
@@ -8,12 +8,12 @@ Vue hook that manages a value in `localStorage`
 
 ```jsx
 import { createComponent } from '@vue/composition-api'
-import { useLocalStorage } from 'vuses'
+import { useSessionStorage } from 'vuses'
 
 const Demo = createComponent({
   setup() {
     const [count, setValue] =
-      useLocalStorage < number > ('useLocalStorage-key', 0)
+      useSessionStorage < number > ('useSessionStorage-key', 0)
     const inc = () => setValue(count.value + 1)
     const dec = () => setValue(count.value - 1)
     return { count, inc, dec }
@@ -34,7 +34,7 @@ const Demo = createComponent({
 ## Reference
 
 ```typescript {2,3}
-function useLocalStorage<T>(
+function useSessionStorage<T>(
   key: string,
   initialValue?: T,
   raw?: boolean

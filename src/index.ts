@@ -12,3 +12,6 @@ export { default as useWindowScroll } from './hooks/sensor/useWindowScroll'
 // Side Effect Hooks
 export { default as useTitle } from './hooks/sideEffect/useTitle'
 export { default as useLocalStorage } from './hooks/sideEffect/useLocalStorage'
+export {
+  default as useSessionStorage
+} from './hooks/sideEffect/useSessionStorage'

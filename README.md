@@ -75,8 +75,8 @@ and then:
   * [ ] `useDebounce`: debounces a function
   * [ ] `useThrottle`: throttles a function
   * [ ] `useAsync`: resolves an async function
-  * [ ] `useLocalStorage`: manages a value in `localStorage`
-  * [ ] `useSessionStorage`: manages a value in `sessionStorage`
+  * [x] `useLocalStorage`: manages a value in `localStorage`
+  * [x] `useSessionStorage`: manages a value in `sessionStorage`
   * [ ] `useFavicon`: sets favicon of the page
   * [x] [`useTitle`](./src/hooks/sideEffect/useTitle/doc.md): sets title of the page
   * [ ] `usePermission`: query permission status for browser APIs
