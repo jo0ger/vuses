@@ -43,6 +43,6 @@ function useSessionStorage<T>(
 
 ### Arguments
 
-- `key`: `localStorage` key to manage
-- `initialValue`: initial value to set, if value in `localStorage` is empty
+- `key`: `sessionStorage` key to manage
+- `initialValue`: initial value to set, if value in `sessionStorage` is empty
 - `raw`: boolean, if set to `true`, hook will not attempt to JSON serialize stored values
