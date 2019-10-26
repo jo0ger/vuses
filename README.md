@@ -80,8 +80,8 @@ and then:
   * [ ] `useDebounce`: debounces a function
   * [ ] `useThrottle`: throttles a function
   * [ ] `useAsync`: resolves an async function
-  * [x] `useLocalStorage`: manages a value in `localStorage`
-  * [x] `useSessionStorage`: manages a value in `sessionStorage`
+  * [x] [`useLocalStorage`](./src/hooks/sideEffect/useLocalStorage/doc.md): manages a value in `localStorage`
+  * [x] [`useSessionStorage`](./src/hooks/sideEffect/useSessionStorage/doc.md): manages a value in `sessionStorage`
   * [ ] `useFavicon`: sets favicon of the page
   * [x] [`useTitle`](./src/hooks/sideEffect/useTitle/doc.md): sets title of the page
   * [ ] `usePermission`: query permission status for browser APIs
