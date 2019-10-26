@@ -12,7 +12,7 @@ const Demo = createComponent({
     const { state, toggle } = this
     return (
       <div>
-        <div>{state}</div>
+        <div>{state ? 'ON' : 'OFF'}</div>
         <button onClick={toggle}>Toggle</button>
         <button onClick={() => toggle(true)}>set true</button>
         <button onClick={() => toggle(false)}>set false</button>
