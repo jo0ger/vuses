@@ -65,7 +65,7 @@ and then:
   * [x] [`useWindowSize`](./src/hooks/sensor/useWindowsize/doc.md): tracks `Widnow` dimensions(browser environment is required)
   * [x] [`useWindowScroll`](./src/hooks/sensor/useWindowScroll/doc.md): tracks `Window` scroll position(browser environment is required)
   * [ ] `useBattery`: tracks device battery state
-  * [ ] [`useGeolocation`](./src/hooks/sensor/useGeolocation/doc.md): tracks geo location state of user's device
+  * [x] [`useGeolocation`](./src/hooks/sensor/useGeolocation/doc.md): tracks geo location state of user's device
   * [ ] `useIdle`: tracks whether user is being inactive
   * [ ] `useIntersection`: tracks an HTML element's intersection
   * [ ] `useEvent`: subscribe to events
@@ -84,7 +84,7 @@ and then:
   * [x] [`useSessionStorage`](./src/hooks/sideEffect/useSessionStorage/doc.md): manages a value in `sessionStorage`
   * [ ] `useFavicon`: sets favicon of the page
   * [x] [`useTitle`](./src/hooks/sideEffect/useTitle/doc.md): sets title of the page
-  * [ ] [`usePermission`](./src/hooks/sideEffect/usePermission/doc.md): query permission status for browser APIs
+  * [x] [`usePermission`](./src/hooks/sideEffect/usePermission/doc.md): query permission status for browser APIs
 * UI:
   * [ ] `useClickAway`: triggers callback when user clicks outside target area
   * [ ] `useCss`: dynamically adjusts CSS
