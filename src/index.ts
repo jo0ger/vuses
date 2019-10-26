@@ -15,3 +15,4 @@ export { default as useLocalStorage } from './hooks/sideEffect/useLocalStorage'
 export {
   default as useSessionStorage
 } from './hooks/sideEffect/useSessionStorage'
+export { default as usePermission } from './hooks/sideEffect/usePermission'

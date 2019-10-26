@@ -33,7 +33,7 @@ export const checkBrowser = (ctx = '') => {
 }
 
 export const addEventListener = (
-  el: Element | Window,
+  el: Element | Window | PermissionStatus,
   event: string,
   handler: EventListener,
   options?: AddEventListenerOptions
@@ -42,7 +42,7 @@ export const addEventListener = (
 }
 
 export const removeEventListener = (
-  el: Element | Window,
+  el: Element | Window | PermissionStatus,
   event: string,
   handler: EventListener,
   options?: EventListenerOptions

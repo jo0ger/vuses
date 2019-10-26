@@ -84,7 +84,7 @@ and then:
   * [x] [`useSessionStorage`](./src/hooks/sideEffect/useSessionStorage/doc.md): manages a value in `sessionStorage`
   * [ ] `useFavicon`: sets favicon of the page
   * [x] [`useTitle`](./src/hooks/sideEffect/useTitle/doc.md): sets title of the page
-  * [ ] `usePermission`: query permission status for browser APIs
+  * [ ] [`usePermission`](./src/hooks/sideEffect/usePermission/doc.md): query permission status for browser APIs
 * UI:
   * [ ] `useClickAway`: triggers callback when user clicks outside target area
   * [ ] `useCss`: dynamically adjusts CSS
