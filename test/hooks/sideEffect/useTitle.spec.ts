@@ -1,6 +1,6 @@
 import Vue, { renderHook } from '../../../src/utils/renderHook'
 import { useTitle } from '../../../src'
-import { Ref } from '@vue/composition-api'
+import { Ref, ref } from '@vue/composition-api'
 
 const useHook = (t?: string | Ref<string>) =>
   renderHook<{
@@ -20,6 +20,15 @@ describe('sideEffect/useTitle', () => {
     const pageTitle = document.title
     const { vm } = useHook()
     expect(vm.title).toBe(pageTitle)
+  })
+
+  it('should set value to initial value if initial value is a ref value', () => {
+    const title = ref('title')
+    const { vm } = useHook(title)
+    expect(vm.title).toBe(title.value)
+
+    title.value = 'title2'
+    expect(vm.title).toBe(title.value)
   })
 
   it('should update page title', () => {
