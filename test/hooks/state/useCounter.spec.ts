@@ -236,5 +236,22 @@ describe('state/useCounter', () => {
       expect(counter.value).toBe(16)
       expect(get()).toBe(counter.value)
     })
+
+    it('should not update value when new value is the same as the old value', () => {
+      const [counter, { set }] = useCounter(10)
+      expect(counter.value).toBe(10)
+
+      set(12)
+      expect(counter.value).toBe(12)
+
+      set(12)
+      expect(counter.value).toBe(12)
+
+      set(16)
+      expect(counter.value).toBe(16)
+
+      set(16)
+      expect(counter.value).toBe(16)
+    })
   })
 })
