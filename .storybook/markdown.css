@@ -55,7 +55,7 @@ a.router-link-exact-active {
   display: block;
   margin: 0 -1em;
   padding: 0 1em;
-  background-color: #e5e2e0;
+  background-color: #eaeaea;
 }
 
 
@@ -71,6 +71,7 @@ pre[class*='language-'],
 code[class*='language-'] {
   font-family: Menlo, Andale Mono, Consolas, Courier, monospace;
   font-size: 85%;
+  background-color: #f8f8f8;
 }
 
 code[class*='language-']::before {

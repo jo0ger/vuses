@@ -29,6 +29,7 @@ export const unwrap = <T>(target: T | Ref<T>): T =>
 
 export const checkBrowser = (ctx = '') => {
   !isBrowser && warn(ctx + ' requires a browser environment')
+  // TODO need throw error?
   return isBrowser
 }
 

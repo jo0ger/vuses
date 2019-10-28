@@ -12,6 +12,7 @@ export { default as useGeolocation } from './hooks/sensor/useGeolocation'
 
 // Side Effect Hooks
 export { default as useTitle } from './hooks/sideEffect/useTitle'
+export { default as useFavicon } from './hooks/sideEffect/useFavicon'
 export { default as useLocalStorage } from './hooks/sideEffect/useLocalStorage'
 export {
   default as useSessionStorage
