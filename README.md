@@ -75,14 +75,13 @@ and then:
   * [ ] `useMouse`: tracks state of mouse position
   * [ ] `useNetwork`: tracks state of user's internet connection
   * [ ] `usePageLeave`: triggers when mouse leaves page boundaries
-  * [ ] ``: 
 * Side Effects:
   * [ ] `useDebounce`: debounces a function
   * [ ] `useThrottle`: throttles a function
   * [ ] `useAsync`: resolves an async function
   * [x] [`useLocalStorage`](./src/hooks/sideEffect/useLocalStorage/doc.md): manages a value in `localStorage`
   * [x] [`useSessionStorage`](./src/hooks/sideEffect/useSessionStorage/doc.md): manages a value in `sessionStorage`
-  * [ ] `useFavicon`: sets favicon of the page
+  * [ ] [`useFavicon`](./src/hooks/sideEffect/useFavicon/doc.md): sets favicon of the page
   * [x] [`useTitle`](./src/hooks/sideEffect/useTitle/doc.md): sets title of the page
   * [x] [`usePermission`](./src/hooks/sideEffect/usePermission/doc.md): query permission status for browser APIs
 * UI:
