@@ -72,7 +72,7 @@ and then:
   * [ ] `useMedia`: tracks state of a CSS media query
   * [ ] `useMediaDevices`: tracks connected hardware devices
   * [ ] `useMotion`: tracks state of device's motion sensor
-  * [ ] `useMouse`: tracks state of mouse position
+  * [ ] [`useMouse`](./src/hooks/sensor/useMouse/doc.md): tracks state of mouse position
   * [ ] `useNetwork`: tracks state of user's internet connection
   * [ ] `usePageLeave`: triggers when mouse leaves page boundaries
 * Side Effects:
