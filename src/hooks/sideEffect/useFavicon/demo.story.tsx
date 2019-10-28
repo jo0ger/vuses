@@ -13,16 +13,14 @@ const Demo = createComponent({
     const [flag, { set }] = useNumber(0)
     const href = computed(() => hrefs[flag.value])
     useFavicon(href)
-
     const toggle = () => set(flag.value ^ 1)
-
     return { href, toggle }
   },
   render() {
     const { href, toggle } = this
     return (
       <NewTab>
-        <div>
+        <div ref="aaa">
           <p>Favicon url: {href}</p>
           <button onClick={toggle}>toggle</button>
         </div>
