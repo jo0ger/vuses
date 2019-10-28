@@ -41,7 +41,5 @@ const Demo = createComponent({
 ## Reference
 
 ```typescript {2,3}
-function useFavicon(
-  title?: string | Ref<string>
-): [Ref<string>, (val: string) => void]
+function useFavicon(href: string | Ref<string>)
 ```

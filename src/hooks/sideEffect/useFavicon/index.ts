@@ -2,8 +2,6 @@ import { Ref, isRef, ref, watch } from '@vue/composition-api'
 import { checkBrowser } from '../../../utils'
 
 export default function useFavicon(href: string | Ref<string>) {
-  if (!href) return
-
   checkBrowser(useFavicon.name)
 
   const isref = isRef(href)
@@ -23,7 +21,8 @@ export default function useFavicon(href: string | Ref<string>) {
 
   if (isref) {
     watch(_href as Ref<string>, update, {
-      lazy: true
+      lazy: true,
+      flush: 'sync'
     })
   }
 }
