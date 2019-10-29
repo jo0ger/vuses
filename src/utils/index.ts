@@ -1,4 +1,5 @@
 import { isRef, Ref } from '@vue/composition-api'
+import { BatteryManager } from '../hooks/sensor/useBattery'
 
 export const isBrowser = typeof window === 'object'
 
@@ -34,7 +35,7 @@ export const checkBrowser = (ctx = '') => {
 }
 
 export const addEventListener = (
-  el: Element | Window | PermissionStatus | Document,
+  el: Element | Window | PermissionStatus | Document | BatteryManager,
   event: string,
   handler: EventListener,
   options?: AddEventListenerOptions
@@ -43,7 +44,7 @@ export const addEventListener = (
 }
 
 export const removeEventListener = (
-  el: Element | Window | PermissionStatus | Document,
+  el: Element | Window | PermissionStatus | Document | BatteryManager,
   event: string,
   handler: EventListener,
   options?: EventListenerOptions
