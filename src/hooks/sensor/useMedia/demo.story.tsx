@@ -1,16 +1,22 @@
 import { storiesOf } from '@storybook/vue'
 import { createComponent } from '@vue/composition-api'
 import Doc from '../../../__stories__/components/Doc'
-import { useMedia } from '../../..'
+import { useMedia, useWindowSize } from '../../..'
 
 const Demo = createComponent({
   setup() {
     const isWide = useMedia('(min-width: 480px)')
-    return { isWide }
+    const { width } = useWindowSize()
+    return { isWide, width }
   },
   render() {
-    const { isWide } = this
-    return <div>Screen is wide(min-width: 480px): {isWide ? 'Yes' : 'No'}</div>
+    const { isWide, width } = this
+    return (
+      <div>
+        <p>width: {width}px</p>
+        <p>Screen is wide(min-width: 480px): {isWide ? 'Yes' : 'No'}</p>
+      </div>
+    )
   }
 })
 
