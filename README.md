@@ -1,9 +1,14 @@
 # vuses
 
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![npm version](https://badge.fury.io/js/vuses.svg)](https://badge.fury.io/js/vuses)
 [![Travis](https://img.shields.io/travis/jo0ger/vuses.svg)](https://travis-ci.org/jo0ger/vuses)
 [![Coveralls](https://img.shields.io/coveralls/jo0ger/vuses.svg)](https://coveralls.io/github/jo0ger/vuses)
 [![dependencies](https://david-dm.org/jo0ger/vuses/status.svg)](https://david-dm.org/jo0ger/vuses)
+[![GitHub stars](https://img.shields.io/github/stars/jo0ger/vuses.svg)](https://github.com/jo0ger/vuses/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/jo0ger/vuses.svg)](https://github.com/jo0ger/vuses/network)
+[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg)](https://github.com/jo0ger/vuses)
+[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/jo0ger/vuses)
 
 Vue Hooks that built with Vue Composition Api
 
