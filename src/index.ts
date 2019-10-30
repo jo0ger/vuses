@@ -12,6 +12,7 @@ export { default as useGeolocation } from './hooks/sensor/useGeolocation'
 export { default as useMouse } from './hooks/sensor/useMouse'
 export { default as useBattery } from './hooks/sensor/useBattery'
 export { default as useMedia } from './hooks/sensor/useMedia'
+export { default as useMediaDevices } from './hooks/sensor/useMediaDevices'
 
 // Side Effect Hooks
 export { default as useTitle } from './hooks/sideEffect/useTitle'

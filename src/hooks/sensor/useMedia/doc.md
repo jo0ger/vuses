@@ -8,7 +8,7 @@ Vue hook that tracks state of a CSS media query.
 
 ```jsx
 import { createComponent } from '@vue/composition-api'
-import { useMouse } from 'vuses'
+import { useMedia } from 'vuses'
 
 const Demo = createComponent({
   setup() {
