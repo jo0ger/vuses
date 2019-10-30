@@ -71,7 +71,7 @@ and then:
   * [ ] `useEvent`: subscribe to events
   * [x] [`useMedia`](./src/hooks/sensor/useMedia/doc.md): tracks state of a CSS media query
   * [x] [`useMediaDevices`](./src/hooks/sensor/useMediaDevices/doc.md): tracks connected hardware devices
-  * [ ] `useMotion`: tracks state of device's motion sensor
+  * [x] [`useDeviceMotion`](./src/hooks/sensor/useDeviceMotion/doc.md): tracks state of device's motion sensor
   * [x] [`useMouse`](./src/hooks/sensor/useMouse/doc.md): tracks state of mouse position
   * [ ] `useNetwork`: tracks state of user's internet connection
   * [ ] `usePageLeave`: triggers when mouse leaves page boundaries
