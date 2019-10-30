@@ -14,6 +14,7 @@ export { default as useBattery } from './hooks/sensor/useBattery'
 export { default as useMedia } from './hooks/sensor/useMedia'
 export { default as useMediaDevices } from './hooks/sensor/useMediaDevices'
 export { default as useDeviceMotion } from './hooks/sensor/useDeviceMotion'
+export { default as useIntersection } from './hooks/sensor/useIntersection'
 
 // Side Effect Hooks
 export { default as useTitle } from './hooks/sideEffect/useTitle'

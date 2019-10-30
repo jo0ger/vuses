@@ -67,7 +67,7 @@ and then:
   * [ ] `useBattery`: tracks device battery state
   * [x] [`useGeolocation`](./src/hooks/sensor/useGeolocation/doc.md): tracks geo location state of user's device
   * [ ] `useIdle`: tracks whether user is being inactive
-  * [ ] `useIntersection`: tracks an HTML element's intersection
+  * [x] [`useIntersection`](./src/hooks/sensor/useIntersection/doc.md): tracks an HTML element's intersection
   * [ ] `useEvent`: subscribe to events
   * [x] [`useMedia`](./src/hooks/sensor/useMedia/doc.md): tracks state of a CSS media query
   * [x] [`useMediaDevices`](./src/hooks/sensor/useMediaDevices/doc.md): tracks connected hardware devices
