@@ -69,7 +69,7 @@ and then:
   * [ ] `useIdle`: tracks whether user is being inactive
   * [ ] `useIntersection`: tracks an HTML element's intersection
   * [ ] `useEvent`: subscribe to events
-  * [ ] `useMedia`: tracks state of a CSS media query
+  * [x] [`useMedia`](./src/hooks/sensor/useMedia/doc.md): tracks state of a CSS media query
   * [ ] `useMediaDevices`: tracks connected hardware devices
   * [ ] `useMotion`: tracks state of device's motion sensor
   * [x] [`useMouse`](./src/hooks/sensor/useMouse/doc.md): tracks state of mouse position

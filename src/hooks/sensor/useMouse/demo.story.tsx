@@ -1,10 +1,5 @@
 import { storiesOf } from '@storybook/vue'
-import {
-  createComponent,
-  reactive,
-  computed,
-  onMounted
-} from '@vue/composition-api'
+import { createComponent } from '@vue/composition-api'
 import Doc from '../../../__stories__/components/Doc'
 import { useMouse } from '../../..'
 

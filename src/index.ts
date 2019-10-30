@@ -11,6 +11,7 @@ export { default as useWindowScroll } from './hooks/sensor/useWindowScroll'
 export { default as useGeolocation } from './hooks/sensor/useGeolocation'
 export { default as useMouse } from './hooks/sensor/useMouse'
 export { default as useBattery } from './hooks/sensor/useBattery'
+export { default as useMedia } from './hooks/sensor/useMedia'
 
 // Side Effect Hooks
 export { default as useTitle } from './hooks/sideEffect/useTitle'

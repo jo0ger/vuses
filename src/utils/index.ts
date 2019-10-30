@@ -35,7 +35,7 @@ export const checkBrowser = (ctx = '') => {
 }
 
 export const addEventListener = (
-  el: Element | Window | PermissionStatus | Document | BatteryManager,
+  el: EventTarget,
   event: string,
   handler: EventListener,
   options?: AddEventListenerOptions
@@ -44,7 +44,7 @@ export const addEventListener = (
 }
 
 export const removeEventListener = (
-  el: Element | Window | PermissionStatus | Document | BatteryManager,
+  el: EventTarget,
   event: string,
   handler: EventListener,
   options?: EventListenerOptions
