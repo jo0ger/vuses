@@ -1721,9 +1721,9 @@
   version "3.0.3"
   resolved "https://registry.npmjs.org/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
 
-"@types/node@*", "@types/node@12.11.5", "@types/node@^12.0.2":
-  version "12.11.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.11.5.tgz#6c3c8dc84988aff11fd2a63d7b5fbf39eaaab7b1"
+"@types/node@*", "@types/node@12.12.3", "@types/node@^12.0.2":
+  version "12.12.3"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.3.tgz#ebfe83507ac506bc3486314a8aa395be66af8d23"
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -4498,6 +4498,21 @@ execa@^2.0.2, execa@^2.0.3:
     signal-exit "^3.0.2"
     strip-final-newline "^2.0.0"
 
+execa@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/execa/-/execa-3.2.0.tgz#18326b79c7ab7fbd6610fd900c1b9e95fa48f90a"
+  dependencies:
+    cross-spawn "^7.0.0"
+    get-stream "^5.0.0"
+    human-signals "^1.1.1"
+    is-stream "^2.0.0"
+    merge-stream "^2.0.0"
+    npm-run-path "^4.0.0"
+    onetime "^5.1.0"
+    p-finally "^2.0.0"
+    signal-exit "^3.0.2"
+    strip-final-newline "^2.0.0"
+
 exit@^0.1.2:
   version "0.1.2"
   resolved "https://registry.npmjs.org/exit/-/exit-0.1.2.tgz#0632638f8d877cc82107d30a0fff1a17cba1cd0c"
@@ -5500,6 +5515,10 @@ https-proxy-agent@^3.0.0:
   dependencies:
     agent-base "^4.3.0"
     debug "^3.1.0"
+
+human-signals@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-1.1.1.tgz#c5b1cd14f50aeae09ab6c59fe63ba3395fe4dfa3"
 
 humanize-ms@^1.2.1:
   version "1.2.1"
@@ -7837,6 +7856,12 @@ npm-run-path@^3.0.0:
   dependencies:
     path-key "^3.0.0"
 
+npm-run-path@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/npm-run-path/-/npm-run-path-4.0.0.tgz#d644ec1bd0569187d2a52909971023a0a58e8438"
+  dependencies:
+    path-key "^3.0.0"
+
 npm-user-validate@~1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/npm-user-validate/-/npm-user-validate-1.0.0.tgz#8ceca0f5cea04d4e93519ef72d0557a75122e951"
@@ -9731,9 +9756,9 @@ select@^1.1.2:
   version "1.1.2"
   resolved "https://registry.npmjs.org/select/-/select-1.1.2.tgz#0e7350acdec80b1108528786ec1d4418d11b396d"
 
-semantic-release@^15.9.16:
-  version "15.13.27"
-  resolved "https://registry.npmjs.org/semantic-release/-/semantic-release-15.13.27.tgz#214be952fdff5b9ba8490e49c5be13e4d0108ead"
+semantic-release@^15.13.28:
+  version "15.13.28"
+  resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-15.13.28.tgz#c47457fafd5bf11f1722a708fa8b897d42837762"
   dependencies:
     "@semantic-release/commit-analyzer" "^6.1.0"
     "@semantic-release/error" "^2.2.0"
@@ -9744,7 +9769,7 @@ semantic-release@^15.9.16:
     cosmiconfig "^5.0.1"
     debug "^4.0.0"
     env-ci "^4.0.0"
-    execa "^1.0.0"
+    execa "^3.2.0"
     figures "^3.0.0"
     find-versions "^3.0.0"
     get-stream "^5.0.0"
