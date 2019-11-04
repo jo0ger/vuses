@@ -1,5 +1,4 @@
 import { isRef, Ref } from '@vue/composition-api'
-import { BatteryManager } from '../hooks/sensor/useBattery'
 
 export const isBrowser = typeof window === 'object'
 
