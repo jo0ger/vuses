@@ -88,6 +88,10 @@ code[class*='language-js']::before {
   content: 'js';
 }
 
+code[class*='language-json']::before {
+  content: 'json';
+}
+
 code[class*='language-jsx']::before {
   content: 'jsx';
 }
