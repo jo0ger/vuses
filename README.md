@@ -69,7 +69,7 @@ and then:
 * Sensors:
   * [x] [`useWindowSize`](./src/hooks/sensor/useWindowsize/doc.md): tracks `Widnow` dimensions(browser environment is required)
   * [x] [`useWindowScroll`](./src/hooks/sensor/useWindowScroll/doc.md): tracks `Window` scroll position(browser environment is required)
-  * [ ] `useBattery`: tracks device battery state
+  * [x] [`useBattery`](./src/hooks/sensor/useBattery/doc.md): tracks device battery state
   * [x] [`useGeolocation`](./src/hooks/sensor/useGeolocation/doc.md): tracks geo location state of user's device
   * [x] [`useIdle`](./src/hooks/sensor/useIdle/doc.md): tracks whether user is being inactive
   * [x] [`useIntersection`](./src/hooks/sensor/useIntersection/doc.md): tracks an HTML element's intersection
