@@ -63,6 +63,7 @@
     ],
     "collectCoverageFrom": [
       "src/**/*.{js,ts}",
+      "!src/hooks/sensor/**",
       "!src/utils/renderHook.ts"
     ]
   },
