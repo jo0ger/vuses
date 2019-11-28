@@ -33,6 +33,24 @@ describe('sideEffect/useDebounce', () => {
     expect(bar.value).toBe(1)
   })
 
+  it('should get the actual state of debounce', async () => {
+    const foo = ref(0)
+    const bar = ref(0)
+    const fn = () => {
+      bar.value++
+    }
+    const [isReady, clear] = useDebounce(fn, 5, [foo])
+    expect(isReady.value).toBe(false)
+    foo.value++
+    await Vue.nextTick()
+    clear()
+    expect(isReady.value).toBe(null)
+    foo.value++
+    await Vue.nextTick()
+    jest.advanceTimersByTime(5)
+    expect(isReady.value).toBe(true)
+  })
+
   it('should be terminated updates', async () => {
     const foo = ref(0)
     const bar = ref(0)
