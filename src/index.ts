@@ -26,3 +26,4 @@ export {
   default as useSessionStorage
 } from './hooks/sideEffect/useSessionStorage'
 export { default as usePermission } from './hooks/sideEffect/usePermission'
+export { default as useDebounce } from './hooks/sideEffect/useDebounce'
