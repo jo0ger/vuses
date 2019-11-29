@@ -1,4 +1,4 @@
-import { watch, Ref, ref, computed } from '@vue/composition-api'
+import { watch, Ref, ref, computed, onUnmounted } from '@vue/composition-api'
 
 type WatcherSource<T> = Ref<T> | (() => T)
 
@@ -32,6 +32,8 @@ export default function useDebounce(
   watch(deps, update, {
     lazy: true
   })
+
+  onUnmounted(clear)
 
   return [isReady, clear]
 }

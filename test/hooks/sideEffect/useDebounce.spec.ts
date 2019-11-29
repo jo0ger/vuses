@@ -2,6 +2,22 @@ import { useDebounce } from '../../../src'
 import { ref } from '@vue/composition-api'
 import Vue, { renderHook } from '../../../src/utils/renderHook'
 
+const useHook = () =>
+  renderHook(() => {
+    const foo = ref(0)
+    const bar = ref(0)
+    const fn = () => {
+      bar.value++
+    }
+    const [isReady, clear] = useDebounce(fn, 5, [foo])
+    return {
+      isReady,
+      clear,
+      bar,
+      foo
+    }
+  })
+
 describe('sideEffect/useDebounce', () => {
   beforeAll(() => {
     jest.useFakeTimers()
@@ -20,49 +36,43 @@ describe('sideEffect/useDebounce', () => {
   })
 
   it('should be delayed updates', async () => {
-    const foo = ref(0)
-    const bar = ref(0)
-    const fn = () => {
-      bar.value++
-    }
-    useDebounce(fn, 5, [foo])
-    foo.value++
-    expect(bar.value).toBe(0)
+    const { vm } = useHook()
+    vm.foo++
+    expect(vm.bar).toBe(0)
     await Vue.nextTick()
     jest.advanceTimersByTime(5)
-    expect(bar.value).toBe(1)
+    expect(vm.bar).toBe(1)
   })
 
   it('should get the actual state of debounce', async () => {
-    const foo = ref(0)
-    const bar = ref(0)
-    const fn = () => {
-      bar.value++
-    }
-    const [isReady, clear] = useDebounce(fn, 5, [foo])
-    expect(isReady.value).toBe(false)
-    foo.value++
+    const { vm } = useHook()
+    expect(vm.isReady).toBe(false)
+    vm.foo++
     await Vue.nextTick()
-    clear()
-    expect(isReady.value).toBe(null)
-    foo.value++
+    vm.clear()
+    expect(vm.isReady).toBe(null)
+    vm.foo++
     await Vue.nextTick()
     jest.advanceTimersByTime(5)
-    expect(isReady.value).toBe(true)
+    expect(vm.isReady).toBe(true)
   })
 
   it('should be terminated updates', async () => {
-    const foo = ref(0)
-    const bar = ref(0)
-    const fn = () => {
-      bar.value++
-    }
-    const [, clear] = useDebounce(fn, 5, [foo])
-    foo.value++
-    expect(bar.value).toBe(0)
+    const { vm } = useHook()
+    vm.foo++
+    expect(vm.bar).toBe(0)
     await Vue.nextTick()
-    clear()
+    vm.clear()
     jest.advanceTimersByTime(5)
-    expect(bar.value).toBe(0)
+    expect(vm.bar).toBe(0)
+  })
+
+  it('should be cleared debounce when unmounted', async () => {
+    const { vm } = useHook()
+    vm.foo++
+    expect(vm.isReady).toBe(false)
+    await Vue.nextTick()
+    vm.$destroy()
+    expect(vm.isReady).toBe(null)
   })
 })
