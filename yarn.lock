@@ -1221,10 +1221,10 @@
     util-deprecate "^1.0.2"
 
 "@storybook/addon-options@^5.2.4":
-  version "5.2.4"
-  resolved "https://registry.npmjs.org/@storybook/addon-options/-/addon-options-5.2.4.tgz#2b8d06b38b4625236691aa642af46d11565dd53d"
+  version "5.2.8"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-5.2.8.tgz#579c7e1f331303382541fa77c1c26242d7d6b79d"
   dependencies:
-    "@storybook/addons" "5.2.4"
+    "@storybook/addons" "5.2.8"
     core-js "^3.0.1"
     util-deprecate "^1.0.2"
 
@@ -1248,6 +1248,18 @@
     "@storybook/channels" "5.2.5"
     "@storybook/client-logger" "5.2.5"
     "@storybook/core-events" "5.2.5"
+    core-js "^3.0.1"
+    global "^4.3.2"
+    util-deprecate "^1.0.2"
+
+"@storybook/addons@5.2.8":
+  version "5.2.8"
+  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-5.2.8.tgz#f8bf8bd555b7a69fb1e9a52ab8cdb96384d931ff"
+  dependencies:
+    "@storybook/api" "5.2.8"
+    "@storybook/channels" "5.2.8"
+    "@storybook/client-logger" "5.2.8"
+    "@storybook/core-events" "5.2.8"
     core-js "^3.0.1"
     global "^4.3.2"
     util-deprecate "^1.0.2"
@@ -1296,6 +1308,28 @@
     telejson "^3.0.2"
     util-deprecate "^1.0.2"
 
+"@storybook/api@5.2.8":
+  version "5.2.8"
+  resolved "https://registry.yarnpkg.com/@storybook/api/-/api-5.2.8.tgz#21f03df8041114eb929bd10b570a17f266568b7f"
+  dependencies:
+    "@storybook/channels" "5.2.8"
+    "@storybook/client-logger" "5.2.8"
+    "@storybook/core-events" "5.2.8"
+    "@storybook/router" "5.2.8"
+    "@storybook/theming" "5.2.8"
+    core-js "^3.0.1"
+    fast-deep-equal "^2.0.1"
+    global "^4.3.2"
+    lodash "^4.17.15"
+    memoizerific "^1.11.3"
+    prop-types "^15.6.2"
+    react "^16.8.3"
+    semver "^6.0.0"
+    shallow-equal "^1.1.0"
+    store2 "^2.7.1"
+    telejson "^3.0.2"
+    util-deprecate "^1.0.2"
+
 "@storybook/channel-postmessage@5.2.4":
   version "5.2.4"
   resolved "https://registry.npmjs.org/@storybook/channel-postmessage/-/channel-postmessage-5.2.4.tgz#e3735bdce42156e54bf462083aebaf23245ab5c3"
@@ -1325,6 +1359,12 @@
 "@storybook/channels@5.2.5":
   version "5.2.5"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-5.2.5.tgz#d6ca2b490281dacb272096563fe760ccb353c4bb"
+  dependencies:
+    core-js "^3.0.1"
+
+"@storybook/channels@5.2.8":
+  version "5.2.8"
+  resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-5.2.8.tgz#79a99ad85dcacb688073c22340c5b7d16b801202"
   dependencies:
     core-js "^3.0.1"
 
@@ -1377,6 +1417,12 @@
 "@storybook/client-logger@5.2.5":
   version "5.2.5"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-5.2.5.tgz#6f386ac6f81b4a783c57d54bb328281abbea1bab"
+  dependencies:
+    core-js "^3.0.1"
+
+"@storybook/client-logger@5.2.8":
+  version "5.2.8"
+  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-5.2.8.tgz#5affe2f9dbbee374721fd2e8729116f5ac39c779"
   dependencies:
     core-js "^3.0.1"
 
@@ -1436,6 +1482,12 @@
 "@storybook/core-events@5.2.5":
   version "5.2.5"
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-5.2.5.tgz#62881164a4a01aa99ff0691e70eaed2dd58e229e"
+  dependencies:
+    core-js "^3.0.1"
+
+"@storybook/core-events@5.2.8":
+  version "5.2.8"
+  resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-5.2.8.tgz#93fc458ea0820ff1409d268b0fe51abba200f5a4"
   dependencies:
     core-js "^3.0.1"
 
@@ -1546,6 +1598,18 @@
     memoizerific "^1.11.3"
     qs "^6.6.0"
 
+"@storybook/router@5.2.8":
+  version "5.2.8"
+  resolved "https://registry.yarnpkg.com/@storybook/router/-/router-5.2.8.tgz#d7de2d401701857c033e28560c30e16512f7f72f"
+  dependencies:
+    "@reach/router" "^1.2.1"
+    "@types/reach__router" "^1.2.3"
+    core-js "^3.0.1"
+    global "^4.3.2"
+    lodash "^4.17.15"
+    memoizerific "^1.11.3"
+    qs "^6.6.0"
+
 "@storybook/theming@5.2.4":
   version "5.2.4"
   resolved "https://registry.npmjs.org/@storybook/theming/-/theming-5.2.4.tgz#79c99f65992082fdb4d39fb652db435dd6bebaca"
@@ -1570,6 +1634,23 @@
     "@emotion/core" "^10.0.14"
     "@emotion/styled" "^10.0.14"
     "@storybook/client-logger" "5.2.5"
+    common-tags "^1.8.0"
+    core-js "^3.0.1"
+    deep-object-diff "^1.1.0"
+    emotion-theming "^10.0.14"
+    global "^4.3.2"
+    memoizerific "^1.11.3"
+    polished "^3.3.1"
+    prop-types "^15.7.2"
+    resolve-from "^5.0.0"
+
+"@storybook/theming@5.2.8":
+  version "5.2.8"
+  resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-5.2.8.tgz#a4c9e0e9a5789c1aa71e4fcb7a8ee86efe3dadcf"
+  dependencies:
+    "@emotion/core" "^10.0.14"
+    "@emotion/styled" "^10.0.14"
+    "@storybook/client-logger" "5.2.8"
     common-tags "^1.8.0"
     core-js "^3.0.1"
     deep-object-diff "^1.1.0"
