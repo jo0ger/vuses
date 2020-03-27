@@ -89,7 +89,7 @@
     "@storybook/addon-options": "^5.2.4",
     "@storybook/vue": "^5.2.5",
     "@types/jest": "24.0.19",
-    "@types/node": "12.11.5",
+    "@types/node": "13.9.5",
     "@types/throttle-debounce": "^2.1.0",
     "@vue/babel-preset-jsx": "^1.1.1",
     "@vue/test-utils": "^1.0.0-beta.29",
